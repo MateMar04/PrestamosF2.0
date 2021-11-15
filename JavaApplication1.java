@@ -43,7 +43,7 @@ public class JavaApplication1 {
         System.out.println("Lista de prestamos:");
         biblio1.MostrarListaPrestamos();
         
-        
+        new Ventana_Biblioteca(biblio1).setVisible(true);
     }
     
 }
