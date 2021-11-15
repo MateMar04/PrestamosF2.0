@@ -22,8 +22,8 @@ public class JavaApplication1 {
         
         
         
-        Publicacion lib1 = new Libro("El señor de los anillos",a1,cat1,e1);
-        Publicacion rev1 = new Revista("Todo deporte",a2,cat2,e2);
+        Publicacion lib1 = new Libro("El señor de los anillos",a1, e1, cat1);
+        Publicacion rev1 = new Revista("Todo deporte",a2, e2, cat2);
         
         Prestamo pres1 = new Prestamo(c1,"12/5/2020","12/6/2020");
         pres1.agregar(lib1);
