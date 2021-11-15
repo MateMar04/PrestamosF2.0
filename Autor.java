@@ -1,0 +1,19 @@
+/**
+ *
+ * @author franb
+ */
+public class Autor {
+    private String nombre;
+
+    public Autor(String nombre) {
+      this.nombre=nombre;
+    }
+
+    @Override
+    public String toString() {
+        return "Autor{" + "nombre=" + nombre + '}';
+    }
+    
+    
+    
+}
