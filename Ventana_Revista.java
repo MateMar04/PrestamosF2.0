@@ -4,7 +4,7 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.Vector;
 
-public class Ventana_Revista extends JFrame{
+public class Ventana_Revista extends JFrame {
     private JComboBox comboBoxRevista;
     private JLabel lbAutor;
     private JLabel lbTitulo;
@@ -31,10 +31,10 @@ public class Ventana_Revista extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 Revista revista = (Revista) revistas.get(comboBoxRevista.getSelectedIndex());
-                lbAutor.setText(revista.getAutor().toString());
+                lbAutor.setText(revista.getAutor().getNombre());
                 lbTitulo.setText(revista.getTitulo());
-                lbCategoria.setText(revista.getCategoria().toString());
-                lbEditorial.setText(revista.getEditorial().toString());
+                lbCategoria.setText(revista.getCategoria().getNombre());
+                lbEditorial.setText(revista.getEditorial().getNombre());
             }
         });
 

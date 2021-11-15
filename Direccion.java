@@ -1,7 +1,7 @@
 class Direccion {
-    private String calle;
-    private String numero;
-    private Barrio barrio;
+    private final String calle;
+    private final String numero;
+    private final Barrio barrio;
 
     public Direccion(String calle, String numero, Barrio barrio) {
         this.calle = calle;
@@ -11,11 +11,8 @@ class Direccion {
 
     @Override
     public String toString() {
-        return "Direccion{" + "calle=" + calle + ", numero=" + numero + " " + barrio + '}';
+        return calle + " " + numero + ", " + barrio;
     }
 
-    
-    
-    
-    
+
 }

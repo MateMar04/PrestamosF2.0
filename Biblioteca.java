@@ -1,13 +1,13 @@
 import java.util.ArrayList;
 
 public class Biblioteca {
-    private String nombre;
-    private ArrayList<Publicacion>listaPublicacion;
-    private ArrayList<Prestamo>listaPrestamos;
-    private ArrayList listaLibro;
-    private ArrayList listaRevista;
-    private ArrayList listaClientes;
-   
+    private final String nombre;
+    private final ArrayList<Publicacion> listaPublicacion;
+    private final ArrayList<Prestamo> listaPrestamos;
+    private final ArrayList listaLibro;
+    private final ArrayList listaRevista;
+    private final ArrayList listaClientes;
+
 
     public Biblioteca(String nombre) {
         this.nombre = nombre;
@@ -20,12 +20,12 @@ public class Biblioteca {
 
     void agregar(Publicacion pub) {
         listaPublicacion.add(pub);
-        if(pub.getClass() == Libro.class){
-                listaLibro.add(pub);
-            }
-        if(pub.getClass() == Revista.class){
-                listaRevista.add(pub);
-            }
+        if (pub.getClass() == Libro.class) {
+            listaLibro.add(pub);
+        }
+        if (pub.getClass() == Revista.class) {
+            listaRevista.add(pub);
+        }
     }
 
     void agregarCliente(Cliente cli) {
@@ -35,24 +35,24 @@ public class Biblioteca {
     void prestar(Prestamo pub) {
         listaPrestamos.add(pub);
     }
-    
-    int CantidadDePrestamos(){
+
+    int CantidadDePrestamos() {
         return listaPrestamos.size();
     }
 
     int CantidadDePublicacionesTotal() {
-       return listaPublicacion.size(); 
+        return listaPublicacion.size();
     }
-    
-    int CantidadDeLibros(){
-           return listaLibro.size();
+
+    int CantidadDeLibros() {
+        return listaLibro.size();
     }
-    
+
 
     void MostrarListaPublicaciones() {
-        for(Publicacion publicacion : listaPublicacion){
+        for (Publicacion publicacion : listaPublicacion) {
             System.out.println(publicacion);
-        }  
+        }
     }
 
     ArrayList<Prestamo> MostrarListaPrestamos() {
@@ -63,7 +63,7 @@ public class Biblioteca {
         return listaRevista.size();
     }
 
-    public ArrayList<Cliente> mostrarClientes(){
+    public ArrayList<Cliente> mostrarClientes() {
         return listaClientes;
     }
 
@@ -86,5 +86,5 @@ public class Biblioteca {
         }
         return revistas;
     }
-    
+
 }

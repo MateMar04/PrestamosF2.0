@@ -2,7 +2,7 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class Ventana_Biblioteca extends JFrame{
+public class Ventana_Biblioteca extends JFrame {
     private JPanel panel1;
     private JButton librosButton;
     private JButton revistasButton;

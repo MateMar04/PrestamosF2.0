@@ -1,16 +1,16 @@
 import java.util.ArrayList;
 
 class Prestamo {
-    private Cliente cliente;
-    private String FechaDePrestamo;
-    private String FechaTentativaDeDevolucion;
-    private ArrayList<Publicacion> lista;
-    
+    private final Cliente cliente;
+    private final String FechaDePrestamo;
+    private final String FechaTentativaDeDevolucion;
+    private final ArrayList<Publicacion> lista;
+
     public Prestamo(Cliente cliente, String FechaDePrestamo, String FechaTentativaDeDevolucion) {
         this.cliente = cliente;
         this.FechaDePrestamo = FechaDePrestamo;
         this.FechaTentativaDeDevolucion = FechaTentativaDeDevolucion;
-        lista=new ArrayList();
+        lista = new ArrayList();
     }
 
     public Cliente getCliente() {
@@ -23,13 +23,12 @@ class Prestamo {
 
     @Override
     public String toString() {
-        return "Prestamo{"+cliente + ", FechaDePrestamo=" + FechaDePrestamo + ", FechaTentativaDeDevolucion=" + FechaTentativaDeDevolucion + '}';
+        return "Prestamo{" + cliente + ", FechaDePrestamo=" + FechaDePrestamo + ", FechaTentativaDeDevolucion=" + FechaTentativaDeDevolucion + '}';
     }
 
-        void agregar(Publicacion pub) {
+    void agregar(Publicacion pub) {
         lista.add(pub);
     }
 
-    
-    
+
 }

@@ -1,13 +1,13 @@
 class Provincia {
-    private String nombre; 
+    private final String nombre;
 
     Provincia(String nombre) {
-        this.nombre=nombre;
+        this.nombre = nombre;
     }
 
     @Override
     public String toString() {
-        return "Provincia{" + "nombre=" + nombre + '}';
+        return nombre;
     }
-    
+
 }

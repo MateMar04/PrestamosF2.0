@@ -1,15 +1,18 @@
 public class Autor {
-    private String nombre;
+    private final String nombre;
 
     public Autor(String nombre) {
-      this.nombre=nombre;
+        this.nombre = nombre;
+    }
+
+    public String getNombre() {
+        return nombre;
     }
 
     @Override
     public String toString() {
         return "Autor{" + "nombre=" + nombre + '}';
     }
-    
-    
-    
+
+
 }

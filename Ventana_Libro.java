@@ -30,10 +30,10 @@ public class Ventana_Libro extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 Libro libro = (Libro) libros.get(comboBoxLibro.getSelectedIndex());
-                lbAutor.setText(libro.getAutor().toString());
+                lbAutor.setText(libro.getAutor().getNombre());
                 lbTitulo.setText(libro.getTitulo());
-                lbCategoria.setText(libro.getCategoria().toString());
-                lbEditorial.setText(libro.getEditorial().toString());
+                lbCategoria.setText(libro.getCategoria().getNombre());
+                lbEditorial.setText(libro.getEditorial().getNombre());
             }
         });
     }
