@@ -1,9 +1,5 @@
 import java.util.ArrayList;
 
-/**
- *
- * @author franb
- */
 public class Biblioteca {
     private String nombre;
     private ArrayList<Publicacion>listaPublicacion;

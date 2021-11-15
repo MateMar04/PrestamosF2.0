@@ -1,7 +1,3 @@
-/**
- *
- * @author franb
- */
 public class Revista extends Publicacion{
     private String titulo;
     private Autor autor;

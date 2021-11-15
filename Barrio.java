@@ -1,7 +1,3 @@
-/**
- *
- * @author franb
- */
 class Barrio {
     private String nombre;
     private Localidad loc;

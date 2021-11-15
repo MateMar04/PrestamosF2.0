@@ -1,7 +1,3 @@
-/**
- *
- * @author franb
- */
 public class Editorial {
     private String nombre;
     

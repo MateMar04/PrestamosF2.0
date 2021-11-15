@@ -1,7 +1,3 @@
-/**
- *
- * @author franb
- */
 public class Categoria {
     private String nombre;
 

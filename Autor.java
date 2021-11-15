@@ -1,7 +1,3 @@
-/**
- *
- * @author franb
- */
 public class Autor {
     private String nombre;
 

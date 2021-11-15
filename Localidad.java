@@ -1,7 +1,3 @@
-/**
- *
- * @author franb
- */
 class Localidad {
     private String nombre;
     private Provincia prov;

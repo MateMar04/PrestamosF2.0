@@ -1,7 +1,3 @@
-/**
- *
- * @author franb
- */
 class Direccion {
     private String calle;
     private String numero;

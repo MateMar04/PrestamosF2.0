@@ -1,9 +1,5 @@
 import java.util.ArrayList;
 
-/**
- *
- * @author franb
- */
 class Prestamo {
     private Cliente cliente;
     private String FechaDePrestamo;

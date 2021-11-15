@@ -1,7 +1,3 @@
-/**
- *
- * @author franb
- */
 class Provincia {
     private String nombre; 
 
