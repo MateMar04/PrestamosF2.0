@@ -17,33 +17,35 @@ public class Ventana_Cliente extends JFrame {
         add(panel1);
         setSize(700, 600);
 
-        Vector vector = new Vector();
-        ArrayList<Cliente> clientes = biblioteca.mostrarClientes();
-        for (Cliente cliente : clientes) {
-            vector.add(cliente.getNombre());
+        ArrayList clientes = biblioteca.mostrarClientes();
+        Vector comboBoxItems = new Vector();
+
+        for (int i = 0; i < clientes.size(); i++) {
+            Cliente cliente = (Cliente) clientes.get(i);
+            comboBoxItems.add(cliente.getNombre());
         }
 
-        comboBoxCliente.setModel(new DefaultComboBoxModel(vector));
+        comboBoxCliente.setModel(new DefaultComboBoxModel(comboBoxItems));
         comboBoxCliente.setSelectedIndex(-1);
 
         comboBoxCliente.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Cliente cliente = clientes.get(comboBoxCliente.getSelectedIndex());
+                Cliente cliente = (Cliente) clientes.get(comboBoxCliente.getSelectedIndex());
                 lbNombre.setText(cliente.getNombre());
                 lbTelefono.setText(cliente.getTelefono());
                 lbDireccion.setText(cliente.getDirec().toString());
                 lbMail.setText(cliente.getEmail());
 
 
-                ArrayList prestamos = new ArrayList();
+                ArrayList prestamos = biblioteca.MostrarListaPrestamos();
                 Vector comboBoxItems = new Vector();
 
-                for (Prestamo prestamo : biblioteca.MostrarListaPrestamos()) {
-                    ArrayList<Publicacion> publicacionesPrestadas = prestamo.getLista();
-                    if (prestamo.getCliente() == cliente) {
-                        for (Publicacion pub : publicacionesPrestadas) {
-                            comboBoxItems.add(pub.getTitulo());
+                for (int i = 0; i < prestamos.size(); i++) {
+                    ArrayList publicacionesPrestadas = ((Prestamo) prestamos.get(i)).getLista();
+                    if (((Prestamo) prestamos.get(i)).getCliente() == cliente) {
+                        for (int j = 0; j < publicacionesPrestadas.size(); j++) {
+                            comboBoxItems.add(((Publicacion) publicacionesPrestadas.get(j)).getTitulo());
                         }
                     }
                 }

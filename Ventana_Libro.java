@@ -16,9 +16,11 @@ public class Ventana_Libro extends JFrame {
         add(panel1);
         setSize(700, 600);
 
-        ArrayList<Libro> libros = biblioteca.listarLibros();
+        ArrayList libros = biblioteca.listarLibros();
         Vector comboBoxItems = new Vector();
-        for (Libro libro : libros) {
+
+        for (int i = 0; i < libros.size(); i++) {
+            Libro libro = (Libro) libros.get(i);
             comboBoxItems.add(libro.getTitulo());
         }
         comboBoxLibro.setModel(new DefaultComboBoxModel(comboBoxItems));
@@ -27,16 +29,12 @@ public class Ventana_Libro extends JFrame {
         comboBoxLibro.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Libro libro = libros.get(comboBoxLibro.getSelectedIndex());
-                dataLoadLibro(libro);
+                Libro libro = (Libro) libros.get(comboBoxLibro.getSelectedIndex());
+                lbAutor.setText(libro.getAutor().toString());
+                lbTitulo.setText(libro.getTitulo());
+                lbCategoria.setText(libro.getCategoria().toString());
+                lbEditorial.setText(libro.getEditorial().toString());
             }
         });
-    }
-
-    private void dataLoadLibro(Libro libro) {
-        lbAutor.setText(libro.getAutor().toString());
-        lbTitulo.setText(libro.getTitulo());
-        lbCategoria.setText(libro.getCategoria().toString());
-        lbEditorial.setText(libro.getEditorial().toString());
     }
 }
