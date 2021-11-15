@@ -66,5 +66,25 @@ public class Biblioteca {
     public ArrayList<Cliente> mostrarClientes(){
         return listaClientes;
     }
+
+    public ArrayList<Libro> listarLibros() {
+        ArrayList<Libro> libros = new ArrayList<>();
+        for (Publicacion p : listaPublicacion) {
+            if (p instanceof Libro) {
+                libros.add((Libro) p);
+            }
+        }
+        return libros;
+    }
+
+    public ArrayList<Revista> listarRevistas() {
+        ArrayList<Revista> revistas = new ArrayList<>();
+        for (Publicacion p : listaPublicacion) {
+            if (p instanceof Revista) {
+                revistas.add((Revista) p);
+            }
+        }
+        return revistas;
+    }
     
 }

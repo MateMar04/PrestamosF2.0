@@ -3,11 +3,13 @@ public abstract class Publicacion {
     private final String titulo;
     private final Autor autor;
     private final Editorial editorial;
+    private final Categoria categoria;
 
     public Publicacion(String titulo, Autor autor, Editorial editorial, Categoria categoria) {
         this.titulo = titulo;
         this.autor = autor;
         this.editorial = editorial;
+        this.categoria = categoria;
         this.cantidadeprestamos = 0;
     }
 
@@ -25,6 +27,10 @@ public abstract class Publicacion {
 
     public Autor getAutor() {
         return autor;
+    }
+
+    public Categoria getCategoria() {
+        return categoria;
     }
 
     public String toString() {
