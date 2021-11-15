@@ -11,6 +11,22 @@ class Cliente {
         this.direc = direc;
     }
 
+    public String getNombre() {
+        return nombre;
+    }
+
+    public String getTelefono() {
+        return telefono;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public Direccion getDirec() {
+        return direc;
+    }
+
     @Override
     public String toString() {
         return "Cliente{" + "nombre=" + nombre + ", telefono=" + telefono + ", email=" + email +" "+ direc + '}';

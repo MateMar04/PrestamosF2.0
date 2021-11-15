@@ -33,6 +33,8 @@ public class JavaApplication1 {
         biblio1.agregar(rev1);
         
         biblio1.prestar(pres1);
+
+        biblio1.agregarCliente(c1);
         
         System.out.println("Cantidad de prestamos realizados = " + biblio1.CantidadDePrestamos());
         System.out.println("Cantidad de libros que posee la biblioteca = "+ biblio1.CantidadDeLibros());

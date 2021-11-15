@@ -4,13 +4,21 @@ class Prestamo {
     private Cliente cliente;
     private String FechaDePrestamo;
     private String FechaTentativaDeDevolucion;
-    ArrayList<Publicacion> lista;
+    private ArrayList<Publicacion> lista;
     
     public Prestamo(Cliente cliente, String FechaDePrestamo, String FechaTentativaDeDevolucion) {
         this.cliente = cliente;
         this.FechaDePrestamo = FechaDePrestamo;
         this.FechaTentativaDeDevolucion = FechaTentativaDeDevolucion;
         lista=new ArrayList();
+    }
+
+    public Cliente getCliente() {
+        return cliente;
+    }
+
+    public ArrayList<Publicacion> getLista() {
+        return lista;
     }
 
     @Override
